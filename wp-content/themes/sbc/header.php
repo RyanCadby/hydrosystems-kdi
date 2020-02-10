@@ -12,7 +12,7 @@
 <!-- START PAGE -->
 <div id="page">
 
-<!--    Start Nav Bar   -->
+<!--  Start Nav Bar -->
     <nav class="navbar" id="navbar">
 
     <!--toggle mobile nav-->
@@ -31,10 +31,10 @@
 
         <div class="navbar-link-container">
             <button class="close-mobile-nav" aria-label="Toggle navigation"><i class="fas fa-times"></i></button>
-            <?php wp_nav_menu(array(
-                    'theme_location' => 'top-nav',
-                    'walker' => new CIM_Walker()
-            )); ?>
+<!--            --><?php //wp_nav_menu(array(
+//                    'theme_location' => 'top-nav',
+//                    'walker' => new CIM_Walker()
+//            )); ?>
         </div>
 
 
