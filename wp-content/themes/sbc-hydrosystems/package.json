@@ -1,0 +1,45 @@
+{
+  "name": "cim-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "autoprefixer": "^9.6.4",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-gzip": "^1.4.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-wp-pot": "^2.3.5",
+    "gulp-zip": "^5.0.1",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^14.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "global": "^4.4.0",
+    "jquery": "^3.4.1",
+    "js-cookie": "^2.2.1",
+    "popper.js": "^1.15.0",
+    "typed.js": "^2.0.11"
+  }
+}

@@ -1,0 +1,21 @@
+// --------------------------------------------- //
+// SECTION 1 - MODULES AND EXTERNAL LIBRARIES
+// -------------------------------------------- //
+
+
+// IMPORT BOOTSTRAP
+@import "node_modules/bootstrap/scss/mixins";
+
+
+// IMPORT HEADER + FOOTER CSS
+@import "./modules/footer";
+@import "./modules/header";
+
+// IMPORT UTILITIES
+@import "./modules/variables";
+@import "./modules/utilities";
+
+
+// --------------------------------------------- //
+// SECTION 2 - TYPE
+// --------------------------------------------- //
