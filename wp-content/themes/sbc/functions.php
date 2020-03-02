@@ -32,7 +32,7 @@ function register_assets() {
     endif;
 
     //   Project page
-    if ( is_page_template('template-project-index.php') ):
+    if ( is_archive('project') ):
         wp_enqueue_style('project-styles', get_template_directory_uri() . '/dist/css/projects.css', array(), '1.0.0', 'all');
     endif;
 }

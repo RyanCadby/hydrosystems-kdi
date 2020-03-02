@@ -40,8 +40,8 @@ $posts = get_posts( $args);
         <div class="row">
             <div class="col col-12">
                 <ul>
-                <?php
-                $customPostTaxonomies = get_object_taxonomies('projects');
+                    <?php
+                    $customPostTaxonomies = get_object_taxonomies('projects');
 
                     if(count($customPostTaxonomies) > 0)
                     {
@@ -98,7 +98,7 @@ $posts = get_posts( $args);
                 <?php echo wp_get_attachment_image(get_field('project_photo',$post->ID),'proj-modal-img'); ?>
                 <div class="modal-header">
                     <h3 class="modal-title" id="exampleModalLongTitle"><?php echo $title; ?></h3>
-<!--                    <p>--><?php //echo $cats; ?><!--</p>-->
+                    <!--                    <p>--><?php //echo $cats; ?><!--</p>-->
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
