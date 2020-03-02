@@ -49,33 +49,3 @@ class Careers_Options_Page {
 }
 
 new Careers_Options_Page;
-
-
-
-// --------------------------------------------------------
-// ---------------- Theme Functions
-// --------------------------------------------------------
-
-
-/**
- * Construct functions page.
- */
-//function theme_function_build(){
-//
-//
-	// Reset Preloader Values
-//	if (isset($_GET['refresh-preloader'])) {
-//		echo '<div id="message" class="updated fade"><p>';
-//		reset_all_Preloader();
-//		echo '</p></div>';
-//	}
-//
-//
-//
-//	?>
-<!--	<div class="wrap">-->
-<!--		<h1>--><?php //_e( 'Theme Functions', 'textdomain' ); ?><!--</h1>-->
-<!--		--><?php //echo '<p><a href="'.admin_url('admin.php?page=careers-theme-functions&refresh-preloader').'">'.__('Empty All Preloaders', 'textdomain').' &raquo;</a></p>'; ?>
-<!--	</div>-->
-<!--	--><?php
-//}

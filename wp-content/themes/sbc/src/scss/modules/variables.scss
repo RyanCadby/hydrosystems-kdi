@@ -1,0 +1,30 @@
+//spacers
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 2),
+        6: ($spacer * 3),
+        7: ($spacer * 4),
+        8: ($spacer * 5),
+);
+
+
+// set color vars
+$theme-colors: (
+        'l-blue' : #1FAEE4,
+        'xl-blue' : #6DD5FD,
+        'd-blue' : #252E76,
+        'xd-blue' : #1A225E,
+        'green' : #8DC63F,
+        'l-gray' : #E8F0F3,
+        'gray' : #9E9E9E,
+        'd-gray' : #686780,
+        'l-green' : #A3E449,
+        'black' : #000000
+);

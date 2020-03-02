@@ -1,0 +1,322 @@
+// IMPORT BOOTSTRAP
+
+// Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// override variables ^^
+@import "variables";
+
+// Optional
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/dropdown";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/card";
+
+
+// IMPORT HEADER + FOOTER CSS
+@import "footer";
+@import "header";
+
+// IMPORT UTILITIES
+@import "utilities";
+
+
+// Fonts
+html, body {
+  font-family: 'Open Sans';
+}
+
+h1, .h1 {
+  font-family: 'Titillium Web';
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+h2, .h2 {
+  font-family: 'Titillium Web';
+}
+
+h3, .h3 {
+  font-family: 'Titillium Web';
+}
+
+h4, .h4 {
+  font-family: 'Titillium Web';
+  font-weight: bold;
+}
+
+h5, .h5 {
+
+}
+
+h6, .h6 {
+
+}
+
+
+// STYLES
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.container-fluid.fullwidth {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+  .row {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    .col {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+
+}
+
+
+// Font Colors
+.l-blue { color: theme-color('l-blue');}
+.xl-blue { color: theme-color('xl-blue');}
+.d-blue { color: theme-color('d-blue'); }
+.xd-blue { color: theme-color('xd-blue'); }
+.green { color: theme-color('green');}
+.l-green { color: theme-color('l-green');}
+.gray { color: theme-color('gray');}
+.l-gray { color: theme-color('l-gray');}
+.d-gray { color: theme-color('d-gray');}
+.black { color: theme-color('black');}
+.white { color: white; }
+
+// Background Colors
+.l-blue-bg { background: theme-color('l-blue');}
+.xl-blue-bg { background: theme-color('xl-blue');}
+.d-blue-bg { background: theme-color('d-blue'); }
+.xd-blue-bg { background: theme-color('xd-blue'); }
+.green-bg { background: theme-color('green');}
+.l-green-bg { background: theme-color('l-green');}
+.gray-bg { background: theme-color('gray');}
+.l-gray-bg { background: theme-color('l-gray');}
+.d-gray-bg { background: theme-color('d-gray');}
+.black-bg { background: theme-color('black');}
+
+
+// buttons
+.btn, button, .nf-form-content input[type=button] {
+  display: inline-block;
+  background: theme-color('d-blue');
+  color: white;
+  line-height: 1;
+  padding: .75rem 1rem;
+  border-radius: .25rem;
+  border: none;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  font-weight: bold;
+
+  >i {
+    margin-left: .5rem;
+  }
+
+  &:hover {
+    background: theme-color('l-green');
+  }
+
+  &.ol {
+    background: none;
+    border: solid 3px white;
+    padding: .6rem 1rem;
+
+    &:hover {
+      background: white;
+    }
+  }
+
+  &.centered{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+// custom utilities
+.copy-width {
+  max-width: 600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+// featured links
+.featured-link, .feature-link {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: theme-color('green');
+
+  >i {
+    margin-left: .5rem;
+  }
+}
+
+// Dividers
+.divider {
+  width: 100%;
+  line-height: 1;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  >img{
+    width:100%;
+    max-width: 500px;
+  }
+}
+
+
+// Blog Cards
+.card {
+  transition: all 0.15s ease-in-out;
+
+  .card-body {
+    position: relative;
+    padding-bottom: 2.75rem;
+
+    .card-title, h4.card-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: theme-color('l-blue');
+      transition: all 0.15s ease-in-out;
+    }
+
+    p.card-text {
+      color: theme-color('gray');
+      margin-bottom: 0;
+
+      i {
+        margin-right: .5rem;
+      }
+    }
+
+    i.fas.fa-chevron-circle-right {
+      position: absolute;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      color: theme-color('l-gray');
+      font-size: 1.5rem;
+      transition: all 0.15s ease-in-out;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    .card-body {
+
+      .card-title, h4.card-title {
+        color: theme-color('d-blue');
+      }
+
+      i.fas.fa-chevron-circle-right {
+        color: theme-color('green');
+      }
+    }
+  }
+}
+
+
+// Contact Section Styles
+#contact{
+
+  span.location-name {
+    text-transform: uppercase;
+    color: theme-color('d-blue');
+    font-weight: bold;
+  }
+  span.location-meta {
+    color: theme-color('l-blue');
+
+    i {
+      margin-right: .5rem;
+    }
+  }
+
+
+  // Ninja Forms Styles
+  .nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
+    background: theme-color('l-gray');
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: theme-color('d-gray');
+    transition: all .5s;
+  }
+
+  #ninja_forms_required_items, .nf-field-container {
+    margin-bottom: 1rem;
+  }
+
+  .nf-form-content {
+    padding: 0 !important;
+    max-width: unset !important;
+  }
+
+  .nf-form-content input[type=button] {
+    display: inline-block;
+    background: theme-color('d-blue');
+    color: white;
+    line-height: 1;
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+    border: none;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 0;
+    display: table;
+
+    &:hover {
+      background: theme-color('l-green');
+      color: theme-color('d-blue');
+    }
+  }
+
+  .nf-field-container.submit-container {
+    margin-bottom: 0;
+  }
+
+  .nf-form-content textarea.ninja-forms-field {
+    height: 9rem;
+  }
+
+  @media only screen and (min-width: 986px){
+    .row.equal-height .col div.card-body{
+      min-height: 413px;
+    }
+  }
+
+  @media only screen and (max-width: 985px){
+    #ninja_forms_required_items, .nf-field-container {
+      margin-bottom: .5rem;
+    }
+  }
+
+}

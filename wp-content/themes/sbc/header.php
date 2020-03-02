@@ -3,42 +3,62 @@
 
 <head>
 
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><?php wp_title(); ?></title>
+    <?php wp_head() ;?>
+
+    <!-- Load Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Titillium+Web:700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/54a52a737c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
 
 <!-- START BODY -->
-<body>
+<body <?php body_class(); ?>>
 
 <!-- START PAGE -->
 <div id="page">
 
-<!--  Start Nav Bar -->
-    <nav class="navbar" id="navbar">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!--toggle mobile nav-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
 
-    <!-- nav bar logo -->
-        <a class="navbar-brand" href="<?php echo get_home_url(); ?>" id="logo">
-            <?php if ($text_logo): ?>
-                <?php echo $text_logo; ?>
-            <?php else: ?>
-                <span class="white">Careers Theme</span>
-            <?php endif; ?>
-        </a>
-
-        <div class="navbar-link-container">
-            <button class="close-mobile-nav" aria-label="Toggle navigation"><i class="fas fa-times"></i></button>
-<!--            --><?php //wp_nav_menu(array(
-//                    'theme_location' => 'top-nav',
-//                    'walker' => new CIM_Walker()
-//            )); ?>
-        </div>
-
-
-    </nav>
 <!--End Nav Bar-->
 
 

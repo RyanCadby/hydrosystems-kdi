@@ -2,9 +2,29 @@
 // SECTION 1 - MODULES AND EXTERNAL LIBRARIES
 // --------------------------------------------- //
 
-@import "./modules/variables";
+@import "./modules/global";
+@import "./modules/projects";
 
 // --------------------------------------------- //
 // SECTION 2 - LANDING SECTION
 // --------------------------------------------- //
 
+#home-landing {
+  background: url("http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/home-banner-bg.jpg");
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+
+  >.container{
+    position: relative;
+  }
+
+  img.home-img {
+    position: absolute;
+    top: -7rem;
+    right: 0;
+    height: calc(100% + 14rem);
+    border-radius: 50%;
+  }
+}
