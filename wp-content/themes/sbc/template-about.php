@@ -12,7 +12,13 @@ $quote = get_field('block_quote');
 $top_copy = get_field('top_copy');
 $bot_copy = get_field('bottom_copy');
 $image = get_field('image');
-$content = $post->post_content;
+
+$args = array(
+    'post_status' => 'publish',
+    'posts_per_page' => -1,
+    'post_type' => 'team-members'
+);
+$posts = get_posts( $args);
 
 
 ?>
@@ -28,17 +34,19 @@ $content = $post->post_content;
     </div>
 </section>
 
-<section class="about-section">
+<section>
     <div class="container">
         <div class="row">
-            <div class="col col-8">
-                <p class="block-quote"><?php echo $quote; ?></p>
-                <?php echo $top_copy; ?>
-                <?php
-                if( !empty( $image ) ): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                <?php endif; ?>
-                <?php echo $bot_copy; ?>
+            <div class="col col-12 col-md-6"></div>
+            <div class="col col-12 col-md-6">
+                <?php $i = 0; foreach ( $posts as $post ): setup_postdata($post) ?>
+                        <div class="proj-card">
+                            <?php echo wp_get_attachment_image(get_field('project_photo',$post->ID),'card-img'); ?>
+                            <button type="button" class="btn-proj" data-toggle="modal" data-target="#modal-<?php echo $post->ID ?>">
+                                <span class="proj-title"><?php echo $post->post_title ?></span>
+                            </button>
+                        </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
