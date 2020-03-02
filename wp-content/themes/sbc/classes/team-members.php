@@ -18,7 +18,7 @@ function create_teammembers() {
             'rewrite' => array('slug' => 'team_member'),
             'menu_icon' => 'dashicons-universal-access',
             'show_in_menu' => true,
-            'menu_position' => 3,
+            'menu_position' => 5,
             'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
         ));
 }

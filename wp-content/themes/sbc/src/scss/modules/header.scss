@@ -1,0 +1,17 @@
+
+#page{
+  nav.navbar{
+    a.navbar-brand{
+      img{
+        width: 200px;
+      }
+    }
+  }
+
+  section.child-header{
+    background-image: url("http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/child-header-bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+

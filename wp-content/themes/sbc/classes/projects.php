@@ -19,7 +19,7 @@ function create_projects() {
             'rewrite' => array('slug' => 'project'),
             'menu_icon' => 'dashicons-admin-page',
             'show_in_menu' => true,
-            'menu_position' => 2,
+            'menu_position' => 4,
             'supports' => array('title', 'editor', 'excerpt', 'thumbnail')
         ));
 }
