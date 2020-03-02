@@ -6,12 +6,16 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php wp_title(); ?></title>
-    <?php wp_head() ;?>
 
     <!-- Load Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Titillium+Web:700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/54a52a737c.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <?php wp_head() ;?>
+
+
+
 
 </head>
 

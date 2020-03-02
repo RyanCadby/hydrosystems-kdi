@@ -17,6 +17,10 @@ function register_assets() {
     wp_enqueue_script('global-scripts', get_template_directory_uri() . '/dist/js/global-min.js', array(), '1.0.0', true);
     wp_enqueue_style('global-styles', get_template_directory_uri() . '/dist/css/global.css', array(), '1.0.0', 'all');
 
+    //Link Bootstrap JS
+    wp_enqueue_script('util-scripts', get_template_directory_uri() . '/dist/js/util.js', array(), '1.0.0', false);
+    wp_enqueue_script('modal-scripts', get_template_directory_uri() . '/dist/js/modal.js', array(), '1.0.0', false);
+
     //   front page
     if ( is_front_page() ):
         wp_enqueue_style('home-styles', get_template_directory_uri() . '/dist/css/home.css', array(), '1.0.0', 'all');
@@ -25,6 +29,11 @@ function register_assets() {
     //   About page
     if ( is_page_template('template-about.php') ):
         wp_enqueue_style('about-styles', get_template_directory_uri() . '/dist/css/about.css', array(), '1.0.0', 'all');
+    endif;
+
+    //   Project page
+    if ( is_page_template('template-project-index.php') ):
+        wp_enqueue_style('project-styles', get_template_directory_uri() . '/dist/css/projects.css', array(), '1.0.0', 'all');
     endif;
 }
 add_action('wp_enqueue_scripts', 'register_assets');

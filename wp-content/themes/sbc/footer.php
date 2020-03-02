@@ -51,7 +51,7 @@
             </div>
 </section>
 
-
 </body>
+
 <?php wp_footer(); ?>
 </html>
