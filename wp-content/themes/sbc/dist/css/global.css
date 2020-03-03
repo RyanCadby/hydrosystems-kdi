@@ -6188,6 +6188,24 @@ textarea.form-control {
   background-size: cover;
   background-repeat: no-repeat; }
 
+#page .navbar-link-container div ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin-bottom: 0; }
+  #page .navbar-link-container div ul li {
+    margin-right: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700; }
+    #page .navbar-link-container div ul li:last-of-type {
+      margin-right: 0; }
+    #page .navbar-link-container div ul li a {
+      color: #252E76;
+      transition: all .1s ease-in-out; }
+      #page .navbar-link-container div ul li a:hover {
+        border-bottom: 4px solid #252E76;
+        text-decoration: none; }
+
 .crumb {
   color: #8DC63F;
   text-transform: uppercase;

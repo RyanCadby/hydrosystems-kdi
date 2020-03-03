@@ -21,6 +21,7 @@ function register_assets() {
     //Link Bootstrap JS
     wp_enqueue_script('util-scripts', get_template_directory_uri() . '/dist/js/util.js', array(), '1.0.0', false);
     wp_enqueue_script('modal-scripts', get_template_directory_uri() . '/dist/js/modal.js', array(), '1.0.0', false);
+    wp_enqueue_script('collapse-scripts', get_template_directory_uri() . '/dist/js/collapse.js', array(), '1.0.0', false);
 
     //   front page
     if ( is_front_page() ):

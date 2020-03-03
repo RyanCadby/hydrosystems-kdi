@@ -13,5 +13,35 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  .navbar-link-container{
+    div{
+      ul{
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        margin-bottom: 0;
+
+        li{
+          margin-right: 1.5rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          &:last-of-type{
+            margin-right: 0;
+          }
+
+          a{
+            color: $d-blue;
+            transition: all .1s ease-in-out;
+
+            &:hover{
+              border-bottom: 4px solid $d-blue;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
