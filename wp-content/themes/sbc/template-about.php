@@ -65,6 +65,9 @@ $posts = get_posts( $args);
 </section>
 
 
+<section>
+    <div class="container">
+
 
 
 
@@ -73,28 +76,42 @@ $posts = get_posts( $args);
     setup_postdata($post);
     $id = $post->ID;
     $title = $post->post_title;
-    $cats = get_field('project_categories', $id);
-    $desc = get_field('project_description');
+    $position = get_field('position', $id);
+    $email = get_field('email', $id);
+    if($email){
+        $email_link = '<a href="mailto:' . $email . '" class="team-email">' . $email . '</a>';
+    }
+    $phone = get_field('phone', $id);
+    if($phone){
+        $phone_link = '<a href="tel:' . $phone . '" class="team-email">' . $phone . '</a>';
+    }
+    $bio= get_field('bio');
     ?>
-    <div class="modal fade" id="modal-<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $title; ?> Modal" aria-hidden="true">
+    <div class="modal fade team-modal" id="modal-<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $title; ?> Modal" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <?php echo wp_get_attachment_image(get_field('project_photo',$post->ID),'proj-modal-img'); ?>
                 <div class="modal-header">
-                    <h3 class="modal-title" id="exampleModalLongTitle"><?php echo $title; ?></h3>
-                    <!--                    <p>--><?php //echo $cats; ?><!--</p>-->
+                    <?php echo wp_get_attachment_image(get_field('headshot',$post->ID),'team-img'); ?>
+                    <div class="team-info-cont">
+                        <h3 class="modal-title" id="exampleModalLongTitle"><?php echo $title; ?></h3>
+                        <h4 class="position"><?php echo $position ?></h4>
+                        <p class="contact"><?php echo $email_link; ?> | <?php echo $phone_link; ?></p>
+                    </div>
+
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p><?php echo $desc; ?></p>
+                    <p><?php echo $bio; ?></p>
                 </div>
             </div>
         </div>
     </div>
 <?php endforeach ?>
-
+    </div>
+</section>
 
 
 

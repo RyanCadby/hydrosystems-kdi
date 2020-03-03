@@ -6261,7 +6261,9 @@ textarea.form-control {
 
 html, body {
   font-family: 'Open Sans';
-  font-size: 16px; }
+  font-size: 16px;
+  overflow-x: hidden;
+  width: 100vw; }
 
 h1, .h1 {
   font-family: 'Titillium Web';

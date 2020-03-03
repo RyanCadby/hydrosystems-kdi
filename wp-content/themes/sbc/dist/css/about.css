@@ -27,3 +27,26 @@ div.team-card {
     div.team-card button:hover {
       opacity: 1;
       background-color: #252E76; }
+
+.team-modal .modal-header {
+  justify-content: unset;
+  align-items: center; }
+  .team-modal .modal-header img {
+    max-width: 100px;
+    height: auto; }
+  .team-modal .modal-header .team-info-cont {
+    padding-left: 2rem; }
+    .team-modal .modal-header .team-info-cont .modal-title {
+      line-height: 1; }
+    .team-modal .modal-header .team-info-cont p.contact {
+      margin-bottom: 0; }
+      .team-modal .modal-header .team-info-cont p.contact a {
+        color: #1FAEE4; }
+        .team-modal .modal-header .team-info-cont p.contact a:hover {
+          color: #8DC63F; }
+
+.team-modal button.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0; }
