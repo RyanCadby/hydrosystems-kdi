@@ -4,6 +4,7 @@
 //require_once( __DIR__ . '/classes/admin.php');
 require_once( __DIR__ . '/classes/options.php');
 require_once( __DIR__ . '/classes/projects.php');
+require_once( __DIR__ . '/classes/services.php');
 require_once( __DIR__ . '/classes/team-members.php');
 require_once( __DIR__ . '/classes/images.php');
 require_once( __DIR__ . '/classes/widget.php');
@@ -33,6 +34,11 @@ function register_assets() {
 
     //   Project page
     if ( is_archive('project') ):
+        wp_enqueue_style('project-styles', get_template_directory_uri() . '/dist/css/projects.css', array(), '1.0.0', 'all');
+    endif;
+
+    //   Services page
+    if ( is_archive('services') ):
         wp_enqueue_style('project-styles', get_template_directory_uri() . '/dist/css/projects.css', array(), '1.0.0', 'all');
     endif;
 }
