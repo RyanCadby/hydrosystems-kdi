@@ -90,6 +90,14 @@ p{
     padding-left: 1rem;
   }
 }
+a{
+  text-decoration: none;
+  transition: all .15s ease-in-out;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
 
 
 // STYLES

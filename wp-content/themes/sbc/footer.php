@@ -1,6 +1,22 @@
 
 <!--END CONTENT-->
 
+<?php
+$facebook_url = get_field('facebook_url', 'option');
+$twitter_url = get_field('twitter_url', 'option');
+$instagram_url = get_field('instagram_url', 'option');
+
+if($facebook_url):
+    $facebook = '<a href="'. $facebook_url . '" class="facebook social-link"><i class="fab fa-facebook-square"></i></a>';
+endif;
+if($twitter_url):
+    $twitter = '<a href="'. $facebook_url . '" class="twitter social-link"><i class="fab fa-twitter-square"></i></a>';
+endif;
+if($instagram_url):
+    $instagram = '<a href="'. $instagram_url . '" class="instagram social-link"><i class="fab fa-instagram-square"></i></a>';
+endif;
+?>
+
 <!-- Start Contact Section -->
 <section class="l-blue-bg" id="contact">
     <div class="container">
@@ -49,6 +65,39 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer-info-section">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-lg-4">
+                <a class="footer-logo-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/imgs/hs-kdi-logo-h.png" alt="Hydro Systems KDI Logo"></a>
+                <h4 class="follow text-center">Follow Us: <?php if($instagram):echo $instagram; endif; if($facebook):echo $facebook; endif; if($twitter):echo $twitter; endif;?></h4>
+            </div>
+            <div class="col col-12 col-lg-5">
+                <!-- About us widget -->
+                <?php
+                    if(is_active_sidebar('about-widget'))
+                    {
+                        dynamic_sidebar('about-widget');
+                    }
+                ?>
+
+            </div>
+            <div class="col col-12 col-lg-3">
+                <!-- footer nav -->
+                <?php
+                if(is_active_sidebar('footer-nav'))
+                {
+                    dynamic_sidebar('footer-nav');
+                }
+                ?>
+
+            </div>
+        </div>
+    </div>
 </section>
 
 </body>

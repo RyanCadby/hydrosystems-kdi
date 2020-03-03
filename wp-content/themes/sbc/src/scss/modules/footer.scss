@@ -1,0 +1,72 @@
+
+.footer-info-section{
+  .container{
+    .row{
+      .col{
+        a.footer-logo-link{
+          width: 80%;
+          overflow: hidden;
+          position: relative;
+          display: block;
+          margin: auto;
+          margin-bottom: 1rem;
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+        h4.follow{
+          font-size: 1rem;
+          color: $d-blue;
+          text-transform: uppercase;
+          font-weight: 700;
+
+          a{
+            margin-left: 1rem;
+            color: $d-blue;
+            transition: color .2s ease-in-out;
+
+            &:hover{
+              color: $green;
+            }
+
+            i{
+              font-size: 1.5rem;
+              margin-left: 0;
+            }
+
+          }
+        }
+
+        ul#menu-footer-menu{
+          column-count: 2;
+          padding-left: 0;
+          list-style-type: none;
+          li{
+            a{
+              color: $d-blue;
+              font-weight: 700;
+
+              &:before{
+                font-family: "Font Awesome 5 Free", 'Font Awesome 5 Pro';
+                font-weight: 900;
+                content:"\f138";
+                padding-right: .25rem;
+              }
+
+              &:hover{
+                color: $green;
+              }
+            }
+          }
+        }
+
+        .widget{
+          h4{
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
