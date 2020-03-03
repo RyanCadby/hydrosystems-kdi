@@ -1,22 +1,32 @@
 <?php
 
+/* Template Name: Project Index */
+
 get_header();
 
 global $wp_query;
 $id = get_the_ID();
 
-$title = get_the_archive_title();
-$quote = get_field('block_quote');
-$top_copy = get_field('top_copy');
-$bot_copy = get_field('bottom_copy');
+$title = get_the_title();
 $image = get_field('image');
 $content = $post->post_content;
 
+$url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$url = substr($url, 0, -1);
+$pathFragments = explode('/', $url);
+$end = end($pathFragments);
+
 
 $args = array(
-    'post_status' => 'publish',
-    'posts_per_page' => -1,
-    'post_type' => 'projects'
+    'posts_per_page' => '-1',
+    'post_type' => 'projects',
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'project_category',
+            'field'    => 'slug',
+            'terms' => $end
+        )
+    )
 );
 $posts = get_posts( $args);
 
@@ -27,7 +37,7 @@ $posts = get_posts( $args);
         <div class="row">
             <div class="col col-12">
                 <?php get_template_part('modules/breadcrumb'); ?>
-                <h1 class="white"><?php post_type_archive_title(); ?></h1>
+                <h1 class="white"><?php echo $title; ?></h1>
             </div>
         </div>
     </div>
@@ -46,19 +56,20 @@ $posts = get_posts( $args);
                         foreach($customPostTaxonomies as $tax)
                         {
                             if($tax != 'featured_project'):
-                                $args = array(
-                                    'orderby' => 'name',
-                                    'show_count' => 0,
-                                    'pad_counts' => 0,
-                                    'hierarchical' => 1,
-                                    'taxonomy' => $tax,
-                                    'title_li' => ''
-                                );
+                            $args = array(
+                                'orderby' => 'name',
+                                'show_count' => 0,
+                                'pad_counts' => 0,
+                                'hierarchical' => 1,
+                                'taxonomy' => $tax,
+                                'title_li' => ''
+                            );
 
-                                $cats = wp_list_categories( $args );
+                            $cats = wp_list_categories( $args );
                             endif;
                         }
                     }
+
                     ?>
                 </ul>
             </div>

@@ -15,7 +15,7 @@ function create_projects() {
                 'menu_name' => __('Projects')
             ),
             'public' => true,
-            'has_archive' => true,
+            'has_archive' => 'projects',
             'rewrite' => array('slug' => 'project'),
             'menu_icon' => 'dashicons-admin-page',
             'show_in_menu' => true,

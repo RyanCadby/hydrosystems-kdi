@@ -26,7 +26,6 @@ $posts = get_posts( $args);
         <div class="row">
             <div class="col col-12">
                 <?php get_template_part('modules/breadcrumb'); ?>
-<!--                <a href="--><?php //home_url(); ?><!--" class="breadcrumb"><i class="fas fa-chevron-circle-left"></i> Home</a>-->
                 <h1 class="white"><?php echo $title; ?></h1>
             </div>
         </div>

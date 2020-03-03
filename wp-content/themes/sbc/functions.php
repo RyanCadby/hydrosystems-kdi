@@ -7,7 +7,7 @@ require_once( __DIR__ . '/classes/projects.php');
 require_once( __DIR__ . '/classes/services.php');
 require_once( __DIR__ . '/classes/team-members.php');
 require_once( __DIR__ . '/classes/images.php');
-require_once( __DIR__ . '/classes/widget.php');
+require_once( __DIR__ . '/classes/menus.php');
 
 
 

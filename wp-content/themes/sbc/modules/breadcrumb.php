@@ -5,6 +5,9 @@ $page = 'Home';
 if( is_singular('services') ):
     $url = get_post_type_archive_link( 'services' );
     $page = 'Services';
+elseif( is_tax('project_category') ):
+    $url = get_post_type_archive_link( 'projects' );
+    $page = 'Projects';
 endif;
 
 ?>

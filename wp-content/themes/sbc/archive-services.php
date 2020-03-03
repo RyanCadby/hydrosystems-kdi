@@ -17,7 +17,7 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col col-12">
-                    <a href="#" class="breadcrumb"><i class="fas fa-chevron-circle-left"></i> Home</a>
+                    <?php get_template_part('modules/breadcrumb'); ?>
                     <h1 class="white">Our <?php post_type_archive_title(); ?></h1>
                 </div>
             </div>
