@@ -1,0 +1,12 @@
+
+.crumb{
+  color: $green;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all .2s ease-in-out;
+
+  &:hover{
+    text-decoration: none;
+    color: $l-blue;
+  }
+}

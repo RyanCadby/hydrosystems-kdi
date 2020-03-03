@@ -18,7 +18,7 @@ get_header();
             <div class="row">
                 <div class="col col-12">
                     <a href="#" class="breadcrumb"><i class="fas fa-chevron-circle-left"></i> Home</a>
-                    <h1 class="white"><?php post_type_archive_title(); ?></h1>
+                    <h1 class="white">Our <?php post_type_archive_title(); ?></h1>
                 </div>
             </div>
         </div>
@@ -26,28 +26,24 @@ get_header();
 
     <section>
         <div class="container services-cont">
-            <div class="row">
+            <div class="row justify-content-between">
 
                     <div class="col col-12 col-md-8">
                         <?php foreach ( $posts as $post ):
                             setup_postdata($post);
                             $service_title = $post->post_title;
+                            $excerpt = $post->post_excerpt;
+                            $link = get_the_permalink();
                             ?>
                             <div class="service-card">
-                                <h3 class="service-title"><?php echo $service_title; ?></h3>
-                                <p class="service-desc"><?php echo $post->post_content ?></p>
+                                <a href="<?php echo $link ?>" class="service-title-link"><h3 class="service-title"><?php echo $service_title; ?></h3></a>
+                                <p class="service-excerpt"><?php echo $excerpt ?></p>
+                                <a href="<?php echo $link ?>" class="read-more">learn more <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></a>
                             </div>
                         <?php endforeach; ?>
                         <?php wp_reset_postdata(); ?>
                     </div>
-                    <div class="col col-4 d-none d-md-block">
-                        <div class="service-menu">
-                            <?php foreach ( $posts as $post ): setup_postdata($post) ?>
-                            <i class="fas fa-chevron-circle-right"></i>
-                            <h4 class="service-title"><?php echo $post->post_title ?></h4>
-                            <?php endforeach ?>
-                        </div>
-                    </div>
+                <?php get_template_part('modules/services','sidebar'); ?>
 
             </div>
         </div>

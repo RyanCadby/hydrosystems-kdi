@@ -1,0 +1,29 @@
+div.team-grid-cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+  max-width: 900px; }
+
+div.team-card {
+  width: calc(33% - 1.3rem);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  height: auto;
+  overflow: hidden;
+  position: relative; }
+  div.team-card img {
+    width: 100%;
+    height: auto; }
+  div.team-card button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: none;
+    transition: all .3s ease-in-out;
+    opacity: 0; }
+    div.team-card button:hover {
+      opacity: 1;
+      background-color: #252E76; }

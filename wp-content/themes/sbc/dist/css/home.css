@@ -1,8 +1,3 @@
-img.attachment-project-img.size-project-img {
-  max-width: 100%;
-  height: auto;
-  width: 100%; }
-
 #home-landing {
   background: url("http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/home-banner-bg.jpg");
   background-size: cover;
@@ -17,3 +12,8 @@ img.attachment-project-img.size-project-img {
     right: 0;
     height: calc(100% + 14rem);
     border-radius: 50%; }
+
+img.attachment-project-img.size-project-img {
+  max-width: 100%;
+  height: auto;
+  width: 100%; }

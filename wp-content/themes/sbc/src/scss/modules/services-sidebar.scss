@@ -1,0 +1,27 @@
+
+
+.service-menu{
+  h3{
+    color: $d-blue;
+    margin-bottom: 1.5rem;
+  }
+  a{
+    display: block;
+    color: $d-gray;
+    margin-bottom: .75rem;
+
+    &:hover{
+      color: $d-blue;
+      text-decoration: none;
+    }
+
+    i{
+      display: inline;
+      font-size: 1.3rem;
+    }
+    h4{
+      display: inline;
+      font-size: 1.3rem;
+    }
+  }
+}

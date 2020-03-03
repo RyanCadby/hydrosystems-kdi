@@ -2,7 +2,7 @@
 // SECTION 1 - MODULES AND EXTERNAL LIBRARIES
 // --------------------------------------------- //
 
-@import "./modules/projects";
+@import "./modules/variables";
 
 // --------------------------------------------- //
 // SECTION 2 - LANDING SECTION
@@ -26,4 +26,10 @@
     height: calc(100% + 14rem);
     border-radius: 50%;
   }
+}
+
+img.attachment-project-img.size-project-img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }

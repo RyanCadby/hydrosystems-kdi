@@ -1,0 +1,39 @@
+@import "./modules/variables";
+
+div.team-grid-cont{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50vw;
+  max-width: 900px;
+}
+// team member card
+div.team-card{
+  width: calc(33% - 1.3rem);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+  button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: none;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+
+    &:hover{
+      opacity: 1;
+      background-color: $d-blue;
+    }
+  }
+}

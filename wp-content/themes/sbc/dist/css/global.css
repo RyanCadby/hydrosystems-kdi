@@ -6214,6 +6214,15 @@ textarea.form-control {
   background-size: cover;
   background-repeat: no-repeat; }
 
+.crumb {
+  color: #8DC63F;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all .2s ease-in-out; }
+  .crumb:hover {
+    text-decoration: none;
+    color: #1FAEE4; }
+
 html, body {
   font-family: 'Open Sans';
   font-size: 16px; }

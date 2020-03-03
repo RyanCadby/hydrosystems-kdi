@@ -1,24 +1,42 @@
-@import "./modules/services-sidebar";
 @import "./modules/variables";
+@import "./modules/services-sidebar";
+
 
 // custom styles
 
 .services-cont{
   .service-card{
-    h3.service-title{
-      color: $l-blue;
+    margin-bottom: 2rem;
 
-      &:before{
-        font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Pro';
-        font-weight: 900;
-        content: "\f138";
-        font-size: 1.4rem;
-        padding-right: .5rem;
+    a.service-title-link{
+      text-decoration: none;
+      &:hover{
+        h3.service-title {
+          color: $d-blue;
+        }
+      }
+      h3.service-title{
+        color: $l-blue;
+
+        &:before{
+          font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Pro';
+          font-weight: 900;
+          content: "\f138";
+          font-size: 1.4rem;
+          padding-right: .5rem;
+        }
       }
     }
-    a{
+
+    .service-excerpt{
+      margin-bottom: 0;
+    }
+    a.read-more{
       color: $green;
       text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: .8rem;
 
       .fa-chevron-right{
         font-size: .7rem;
