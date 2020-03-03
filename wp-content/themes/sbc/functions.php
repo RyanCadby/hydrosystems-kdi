@@ -39,7 +39,7 @@ function register_assets() {
 
     //   Services page
     if ( is_archive('services') ):
-        wp_enqueue_style('project-styles', get_template_directory_uri() . '/dist/css/projects.css', array(), '1.0.0', 'all');
+        wp_enqueue_style('service-styles', get_template_directory_uri() . '/dist/css/services.css', array(), '1.0.0', 'all');
     endif;
 }
 add_action('wp_enqueue_scripts', 'register_assets');
