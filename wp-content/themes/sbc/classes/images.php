@@ -8,3 +8,5 @@ function custom_image_sizes() {
     add_image_size( 'card-img', 400, 250, array('center', 'center'));
     add_image_size( 'proj-modal-img', 800, 350, array('center', 'center'));
 }
+
+add_theme_support( 'post-thumbnails' );
