@@ -4,7 +4,7 @@
 
 get_header();
 
-global $wp_query;
+
 $id = get_the_ID();
 
 $title = get_the_title();

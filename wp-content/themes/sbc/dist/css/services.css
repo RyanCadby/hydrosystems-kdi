@@ -44,3 +44,7 @@
     .services-cont .service-card a.read-more:hover {
       color: #252E76;
       text-decoration: none; }
+
+@media only screen and (max-width: 575px) {
+  .services-cont .service-card {
+    margin-bottom: 1.5rem; } }

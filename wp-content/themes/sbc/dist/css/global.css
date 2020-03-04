@@ -6347,15 +6347,16 @@ h4, .h4 {
 p {
   font-family: 'Open-Sans', sans-serif;
   font-size: 1rem; }
+  p:last-of-type {
+    margin-bottom: 0; }
   p.block-quote {
     font-size: 1.4rem;
     font-style: italic;
     color: #8DC63F;
     line-height: 1.2;
     border-left: 3px solid #8DC63F;
-    padding-left: 1rem; }
-  p:last-of-type {
-    margin-bottom: 0; }
+    padding-left: 1rem;
+    margin-bottom: 1rem; }
 
 a {
   text-decoration: none;

@@ -3,10 +3,12 @@
 section{
   &.category-section{
     ul{
-      ist-style-type: none;
+      list-style-type: none;
       padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
       li{
-        display: inline;
+        //display: inline;
         padding-right: 1rem;
         a{
           font-weight: 700;
@@ -17,7 +19,7 @@ section{
 
           &:hover{
             color: $green;
-            text-decoration: nones;
+            text-decoration: none;
           }
         }
       }

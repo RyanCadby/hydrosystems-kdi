@@ -1,8 +1,9 @@
 section.category-section ul {
-  ist-style-type: none;
-  padding-left: 0; }
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap; }
   section.category-section ul li {
-    display: inline;
     padding-right: 1rem; }
     section.category-section ul li a {
       font-weight: 700;
@@ -12,7 +13,7 @@ section.category-section ul {
       text-decoration: none; }
       section.category-section ul li a:hover {
         color: #8DC63F;
-        text-decoration: nones; }
+        text-decoration: none; }
 
 section.project-grid div.proj-card {
   width: 100%;

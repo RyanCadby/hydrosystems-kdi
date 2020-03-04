@@ -18,3 +18,7 @@ section .blog-prev {
     section .blog-prev a.read-more:hover {
       color: #252E76;
       text-decoration: none; }
+
+@media only screen and (max-width: 767px) {
+  section .blog-prev {
+    margin-bottom: 1.5rem; } }

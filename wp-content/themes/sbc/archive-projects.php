@@ -36,7 +36,7 @@ $posts = get_posts( $args);
 <section class="category-section pb-0">
     <div class="container">
         <div class="row">
-            <div class="col col-12">
+            <div class="col col-10 col-sm-12">
                 <ul>
                     <?php
                     $customPostTaxonomies = get_object_taxonomies('projects');
@@ -68,9 +68,9 @@ $posts = get_posts( $args);
 
 <section class="project-grid pt-0">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <?php $i = 0; foreach ( $posts as $post ): setup_postdata($post) ?>
-                <div class="col col-12 col-sm-6 col-lg-4">
+                <div class="col col-10 col-sm-6 col-lg-4">
                     <div class="proj-card">
                         <?php echo wp_get_attachment_image(get_field('project_photo',$post->ID),'card-img'); ?>
                         <button type="button" class="btn-proj" data-toggle="modal" data-target="#modal-<?php echo $post->ID ?>">

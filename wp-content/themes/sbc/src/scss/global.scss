@@ -88,6 +88,10 @@ p{
   font-family: 'Open-Sans', sans-serif;
   font-size: 1rem;
 
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+
   &.block-quote{
     font-size: 1.4rem;
     font-style: italic;
@@ -95,10 +99,7 @@ p{
     line-height: 1.2;
     border-left: 3px solid $green;
     padding-left: 1rem;
-  }
-
-  &:last-of-type{
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 }
 a{

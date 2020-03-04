@@ -50,3 +50,11 @@
     }
   }
 }
+
+@media only screen and (max-width: 575px){
+  .services-cont{
+    .service-card{
+      margin-bottom: 1.5rem;
+    }
+  }
+}

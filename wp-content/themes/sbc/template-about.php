@@ -65,11 +65,6 @@ $posts = get_posts( $args);
 </section>
 
 
-<section>
-    <div class="container">
-
-
-
 
 <!-- Build All Modals -->
 <?php $i = 0; foreach ( $posts as $post ):
@@ -110,8 +105,6 @@ $posts = get_posts( $args);
         </div>
     </div>
 <?php endforeach ?>
-    </div>
-</section>
 
 
 

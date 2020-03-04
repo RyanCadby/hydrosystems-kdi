@@ -74,3 +74,35 @@ div.team-card{
     border-radius: 0;
   }
 }
+
+@media only screen and (max-width: 991px){
+  div.team-card{
+    width: calc(49% - 1.3rem);
+  }
+}
+
+@media only screen and (max-width: 768px){
+  div.team-grid-cont{
+    width: 100%;
+    padding-top: 2rem;
+  }
+  div.team-card{
+    width: calc(24% - 1rem);
+  }
+}
+
+@media only screen and (max-width: 575px){
+  div.team-grid-cont{
+  }
+  div.team-card{
+    width: calc(33% - 1rem);
+  }
+}
+
+@media only screen and (max-width: 414px){
+  div.team-grid-cont{
+  }
+  div.team-card{
+    width: calc(50% - 1rem);
+  }
+}
