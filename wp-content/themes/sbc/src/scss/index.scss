@@ -8,4 +8,36 @@
 // SECTION 2 -
 // --------------------------------------------- //
 
+section{
+  .blog-prev{
+    margin-bottom: 3rem;
+    a.blog-title-link{
+      color: $l-blue;
+      &:hover{
+        color: $d-blue;
+      }
+    }
 
+    p.blog-excerpt{
+      margin-bottom:0;
+    }
+
+    a.read-more{
+      color: $green;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: .8rem;
+
+      .fa-chevron-right{
+        font-size: .7rem;
+        margin-right: -.1rem;
+      }
+
+      &:hover{
+        color: $d-blue;
+        text-decoration: none;
+      }
+    }
+  }
+}

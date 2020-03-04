@@ -6224,6 +6224,34 @@ textarea.form-control {
 .footer-info-section .container .row .col .widget h4 {
   color: #8DC63F; }
 
+@media only screen and (max-width: 991px) {
+  section.footer-info-section {
+    padding: 1rem 0; }
+    section.footer-info-section div.container div.row div.col {
+      padding-bottom: 2rem; }
+      section.footer-info-section div.container div.row div.col a.footer-logo-link {
+        width: 300px; } }
+
+@media only screen and (max-width: 768px) {
+  section div.container div.row {
+    justify-content: center; }
+    section div.container div.row div.col a.footer-logo-link {
+      width: 150px; }
+    section div.container div.row div.col h4.follow a.social-link i.fab {
+      font-size: 2rem; }
+    section div.container div.row div.col div.footer-nav div ul.menu#menu-footer-menu {
+      column-count: 2; } }
+
+@media only screen and (max-width: 575px) {
+  section div.container div.row {
+    justify-content: center; }
+    section div.container div.row div.col a.footer-logo-link {
+      width: 100px; }
+    section div.container div.row div.col h4.follow a.social-link i.fab {
+      font-size: 2rem; }
+    section div.container div.row div.col div.footer-nav div ul.menu#menu-footer-menu {
+      column-count: 1; } }
+
 #page nav.navbar a.navbar-brand img {
   width: 200px; }
 
@@ -6250,6 +6278,37 @@ textarea.form-control {
         border-bottom: 4px solid #252E76;
         text-decoration: none; }
 
+@media only screen and (max-width: 991px) {
+  #page nav.navbar a.navbar-brand img {
+    width: 200px; }
+  #page .navbar-link-container {
+    margin-top: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-top: 1px solid gray; }
+    #page .navbar-link-container div ul {
+      padding-left: 0; } }
+
+@media only screen and (max-width: 576px) {
+  #page nav.navbar a.navbar-brand img {
+    width: 200px; }
+  #page .navbar-link-container {
+    margin-top: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-top: 1px solid gray; }
+    #page .navbar-link-container div ul {
+      display: block; }
+      #page .navbar-link-container div ul li {
+        padding-bottom: .25rem;
+        color: #252E76; }
+        #page .navbar-link-container div ul li:before {
+          content: '\f138';
+          font-family: 'Font Awesome 5 Pro';
+          font-weight: 900;
+          font-size: .8rem;
+          padding-right: .25rem; } }
+
 .crumb {
   color: #8DC63F;
   text-transform: uppercase;
@@ -6263,7 +6322,11 @@ html, body {
   font-family: 'Open Sans';
   font-size: 16px;
   overflow-x: hidden;
-  width: 100vw; }
+  width: 100vw;
+  scroll-behavior: smooth; }
+  @media only screen and (max-width: 991px) {
+    html, body {
+      font-size: 14px; } }
 
 h1, .h1 {
   font-family: 'Titillium Web';
@@ -6291,6 +6354,8 @@ p {
     line-height: 1.2;
     border-left: 3px solid #8DC63F;
     padding-left: 1rem; }
+  p:last-of-type {
+    margin-bottom: 0; }
 
 a {
   text-decoration: none;
@@ -6514,3 +6579,17 @@ section {
 @media only screen and (max-width: 985px) {
   #contact #ninja_forms_required_items, #contact .nf-field-container {
     margin-bottom: .5rem; } }
+
+@media only screen and (max-width: 991px) {
+  section {
+    padding: 3rem 0; } }
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 2rem 0; }
+  .divider {
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; } }

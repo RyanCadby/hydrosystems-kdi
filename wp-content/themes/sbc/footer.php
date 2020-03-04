@@ -73,10 +73,10 @@ endif;
     <div class="container">
         <div class="row">
             <div class="col col-12 col-lg-4">
-                <a class="footer-logo-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/dist/imgs/hs-kdi-logo-h.png" alt="Hydro Systems KDI Logo"></a>
+                <a class="footer-logo-link" href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/dist/imgs/hs-kdi-logo-h.png" alt="Hydro Systems KDI Logo"></a>
                 <h4 class="follow text-center">Follow Us: <?php if($instagram):echo $instagram; endif; if($facebook):echo $facebook; endif; if($twitter):echo $twitter; endif;?></h4>
             </div>
-            <div class="col col-12 col-lg-5">
+            <div class="col col-8 col-sm-7 col-lg-5">
                 <!-- About us widget -->
                 <?php
                     if(is_active_sidebar('about-widget'))
@@ -86,7 +86,7 @@ endif;
                 ?>
 
             </div>
-            <div class="col col-12 col-lg-3">
+            <div class="col col-8 col-sm-5 col-lg-3">
                 <!-- footer nav -->
                 <?php
                 if(is_active_sidebar('footer-nav'))
@@ -95,6 +95,16 @@ endif;
                 }
                 ?>
 
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bottom-bar-section py-0 bg-l-gray py-2">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12">
+                <p class="small d-blue mb-0">&copy; 2020 | All Rights Reserved | Content may not be duplicated without express written permission. </p>
             </div>
         </div>
     </div>

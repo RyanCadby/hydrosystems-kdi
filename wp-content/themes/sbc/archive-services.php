@@ -50,17 +50,6 @@ get_header();
     </section>
 
 
-    <script>
-
-    </script>
-
-    <style>
-        .service-desc .more-text{
-            display: none;
-        }
-    </style>
-
-
 
 
 

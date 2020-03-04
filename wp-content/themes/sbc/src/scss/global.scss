@@ -50,6 +50,11 @@ html, body {
   font-size: 16px;
   overflow-x: hidden;
   width: 100vw;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: 991px){
+    font-size: 14px;
+  }
 }
 
 h1, .h1 {
@@ -90,6 +95,10 @@ p{
     line-height: 1.2;
     border-left: 3px solid $green;
     padding-left: 1rem;
+  }
+
+  &:last-of-type{
+    margin-bottom: 0;
   }
 }
 a{
@@ -359,6 +368,30 @@ section {
     #ninja_forms_required_items, .nf-field-container {
       margin-bottom: .5rem;
     }
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+
+  section {
+    padding: 3rem 0;
+  }
+}
+
+@media only screen and (max-width: 768px){
+
+  section{
+    padding: 2rem 0;
+  }
+
+  // Dividers
+  .divider {
+    width: 100%;
+    line-height: 1;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
 }

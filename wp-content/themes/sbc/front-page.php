@@ -1,7 +1,12 @@
-<?php get_header(); ?>
+<?php get_header();
+
+$home_id = get_the_ID();
+
+?>
 
 <!--HERO SECTION-->
-<section class="d-blue-bg white" id="home-landing">
+<section class="white" id="home-landing">
+    <div class="hero-bg"></div>
     <div class="container">
         <div class="row">
             <div class="col col-12 col-md-6">
@@ -10,8 +15,10 @@
                 <a href="<?php the_field('hero_cta_link'); ?>" class="btn ol"><?php the_field('hero_cta_txt'); ?><i class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
-        <img src="http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/home-sprinkler-head.jpg" class="home-img">
+        <img src="<?php echo get_template_directory_uri();?>/dist/imgs/hskdi-hero-bg-2.png" class="d-none d-md-block home-bg-img">
+        <img src="<?php echo get_template_directory_uri();?>/dist/imgs/home-sprinkler-head.jpg" class="d-none d-md-block home-img">
     </div>
+
 </section>
 
 <!--SERVICES SECTION-->
@@ -21,7 +28,7 @@
             <div class="col col-12">
                 <h2 class="d-blue text-center"><?php the_field('services_title'); ?></h2>
                 <p class="text-center copy-width"><?php the_field('services_description'); ?></p>
-                <div class="divider"><img src="http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/divider-gray.png"></div>
+                <div class="divider"><img src="<?php echo get_template_directory_uri();?>/dist/imgs/divider-gray.png"></div>
             </div>
             <div class="col col-12 col-md-4 text-center mb-5">
                 <h3 class="l-blue"><?php the_field('service_1_title'); ?></h3>
@@ -56,8 +63,8 @@
         </div>
     </div>
 
-    <div class="container-fluid fullwidth">
-        <div class="row">
+    <div class="container-fluid fullwidth proj-cont">
+        <div class="row justify-content-center">
             <?php
             $args = array(
                 'post_status' => 'publish',
@@ -75,7 +82,7 @@
             foreach ($projects as $post):
                 setup_postdata($post);
             ?>
-            <div class="col col-12 col-md-4">
+            <div class="col col-10 col-sm-8 col-md-4">
                 <?php echo wp_get_attachment_image(get_field('project_photo',$post->ID),'project-img'); ?>
             </div>
             <?php endforeach; ?>
@@ -96,46 +103,41 @@
 <!--RECENT NEWS SECTION-->
 <section>
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col col-12">
                 <h2 class="d-blue text-center"><?php the_field('news_title'); ?></h2>
                 <p class="text-center copy-width"><?php the_field('news_description'); ?></p>
                 <div class="divider"><img src="http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/divider-gray.png"></div>
             </div>
 
-            <div class="col col-12 col-md-4 mb-5">
-                <a href="#" class="card">
-                    <?php echo wp_get_attachment_image(93,'card-img',"",array('class' => 'card-img-top')); ?>
-                    <div class="card-body">
-                        <h4 class="card-title l-blue">Maecenas ornare libero vitae lorem gravida viverra.</h4>
-                        <p class="card-text"><i class="fas fa-calendar"></i> Jan 10, 1900</p>
-                        <i class="fas fa-chevron-circle-right"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col col-12 col-md-4 mb-5">
-                <a href="#" class="card">
-                    <?php echo wp_get_attachment_image(93,'card-img',"",array('class' => 'card-img-top')); ?>
-                    <div class="card-body">
-                        <h4 class="card-title l-blue">Maecenas ornare libero vitae lorem gravida viverra.</h4>
-                        <p class="card-text"><i class="fas fa-calendar"></i> Jan 10, 1900</p>
-                        <i class="fas fa-chevron-circle-right"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="col col-12 col-md-4 mb-5">
-                <a href="#" class="card">
-                    <?php echo wp_get_attachment_image(93,'card-img',"",array('class' => 'card-img-top')); ?>
-                    <div class="card-body">
-                        <h4 class="card-title l-blue">Maecenas ornare libero vitae lorem gravida viverra.</h4>
-                        <p class="card-text"><i class="fas fa-calendar"></i> Jan 10, 1900</p>
-                        <i class="fas fa-chevron-circle-right"></i>
-                    </div>
-                </a>
-            </div>
+            <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3,
+                );
+
+            $posts = get_posts($args);
+
+                foreach( $posts as $post ):
+                    $id = get_the_ID();
+                    $title = $post->post_title;
+                    $date = get_the_date('F j, Y', $id);
+                    $link = get_the_permalink($id);
+            ?>
+                <div class="col col-12 col-sm-8 col-md-6 col-lg-4 mb-5">
+                    <a href="<?php echo $link; ?>" class="card">
+                        <?php echo wp_get_attachment_image(93,'card-img',"",array('class' => 'card-img-top')); ?>
+                        <div class="card-body">
+                            <h4 class="card-title l-blue"><?php echo $title; ?></h4>
+                            <p class="card-text"><i class="fas fa-calendar"></i> <?php echo $date; ?> </p>
+                            <i class="fas fa-chevron-circle-right"></i>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach; ?>
 
             <div class="col col-12">
-                <a href="<?php the_field('news_cta_link'); ?>" class="btn centered"><?php the_field('news_cta_txt');?><i class="fas fa-angle-double-right"></i></a>
+                <a href="<?php the_field('news_cta_link', $home_id); ?>" class="btn centered"><?php the_field('news_cta_txt', $home_id);?><i class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
     </div>
