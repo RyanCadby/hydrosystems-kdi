@@ -24,7 +24,7 @@ endif;
             <div class="col col-12">
                 <h2 class="white text-center"><?php the_field('contact_title', 'option'); ?></h2>
                 <p class="white text-center copy-width"><?php the_field('contact_description', 'option'); ?></p>
-                <div class="divider"><img src="http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/divider-white.png"></div>
+                <div class="divider"><img src="<?php echo get_template_directory_uri(); ?>/dist/imgs/divider-white.png"></div>
             </div>
         </div>
         <div class="row equal-height">

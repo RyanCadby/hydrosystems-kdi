@@ -31,7 +31,7 @@ $content = $post->post_content;
 <section class="about-section">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col col-8">
+            <div class="col col-12 col-md-8">
                 <p class="block-quote"><?php echo $quote; ?></p>
                 <?php echo $top_copy; ?>
                 <?php

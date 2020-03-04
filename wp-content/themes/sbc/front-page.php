@@ -30,17 +30,17 @@ $home_id = get_the_ID();
                 <p class="text-center copy-width"><?php the_field('services_description'); ?></p>
                 <div class="divider"><img src="<?php echo get_template_directory_uri();?>/dist/imgs/divider-gray.png"></div>
             </div>
-            <div class="col col-12 col-md-4 text-center mb-5">
+            <div class="col col-10 col-md-4 text-center mb-5">
                 <h3 class="l-blue"><?php the_field('service_1_title'); ?></h3>
                 <p ><?php the_field('service_1_description'); ?></p>
                 <a class="feature-link" href="<?php the_field('service_1_cta_link');?>"><?php the_field('service_1_cta_text');?><i class="fas fa-angle-double-right"></i></a>
             </div>
-            <div class="col col-12 col-md-4 text-center mb-5">
+            <div class="col col-10 col-md-4 text-center mb-5">
                 <h3 class="l-blue"><?php the_field('service_2_title'); ?></h3>
                 <p><?php the_field('service_2_description'); ?></p>
                 <a class="feature-link" href="<?php the_field('service_2_cta_link');?>"><?php the_field('service_2_cta_text');?><i class="fas fa-angle-double-right"></i></a>
             </div>
-            <div class="col col-12 col-md-4 text-center mb-5">
+            <div class="col col-10 col-md-4 text-center mb-5">
                 <h3 class="l-blue"><?php the_field('service_3_title'); ?></h3>
                 <p><?php the_field('service_3_description'); ?></p>
                 <a class="feature-link" href="<?php the_field('service_3_cta_link');?>"><?php the_field('service_3_cta_text');?><i class="fas fa-angle-double-right"></i></a>
@@ -58,7 +58,7 @@ $home_id = get_the_ID();
             <div class="col col-12">
                 <h2 class="d-blue text-center"><?php the_field('projects_title'); ?></h2>
                 <p class="text-center copy-width"><?php the_field('projects_description'); ?></p>
-                <div class="divider"><img src="http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/divider-gray.png"></div>
+                <div class="divider"><img src="<?php echo get_template_directory_uri(); ?>/dist/imgs/divider-gray.png"></div>
             </div>
         </div>
     </div>
@@ -83,7 +83,12 @@ $home_id = get_the_ID();
                 setup_postdata($post);
             ?>
             <div class="col col-10 col-sm-8 col-md-4">
-                <?php echo wp_get_attachment_image(get_field('project_photo',$post->ID),'project-img'); ?>
+                <div class="proj-card">
+                    <?php echo wp_get_attachment_image(get_field('project_photo',$post->ID),'card-img'); ?>
+                    <a class="link-proj" href="<?php echo get_post_type_archive_link( 'projects' ); ?>">
+                        <span class="proj-title"><?php echo $post->post_title ?></span>
+                    </a>
+                </div>
             </div>
             <?php endforeach; ?>
             <?php wp_reset_postdata();?>
@@ -107,7 +112,7 @@ $home_id = get_the_ID();
             <div class="col col-12">
                 <h2 class="d-blue text-center"><?php the_field('news_title'); ?></h2>
                 <p class="text-center copy-width"><?php the_field('news_description'); ?></p>
-                <div class="divider"><img src="http://localhost:3000/hydrosystems-kdi/wp-content/themes/sbc/dist/imgs/divider-gray.png"></div>
+                <div class="divider"><img src="<?php echo get_template_directory_uri(); ?>/dist/imgs/divider-gray.png"></div>
             </div>
 
             <?php

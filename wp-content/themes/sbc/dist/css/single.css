@@ -1,8 +1,1 @@
-section .feat-img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 2rem; }
-
-@media only screen and (max-width: 768px) {
-  section .feat-img {
-    margin-bottom: 1.5rem; } }
+section .feat-img{width:100%;height:auto;margin-bottom:2rem}@media only screen and (max-width:768px){section .feat-img{margin-bottom:1.5rem}}
